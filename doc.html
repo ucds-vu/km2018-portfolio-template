@@ -29,7 +29,7 @@ Replace this text with your summary of Lecture 1 about the topic of "Knowledge a
 Replace this text with your summary of the paper by Voida et al. Cite it as [Voida et al. 2011].
 </p>
 
-<p><em>Word count:</em> <span id="p2count"></span></p>
+<p><em>Word count:</em> <span id="p2count">...</span></p>
 
 <h3>Guha et al. 2016</h3>
 
@@ -37,7 +37,7 @@ Replace this text with your summary of the paper by Voida et al. Cite it as [Voi
 Replace this text with your summary of the paper by Guha et al. Cite it as [Guha et al. 2016].
 </p>
 
-<p><em>Word count:</em> <span id="p3count"></span></p>
+<p><em>Word count:</em> <span id="p3count">...</span></p>
 
 
 <h2>References</h2>
@@ -47,19 +47,7 @@ Replace this text with your summary of the paper by Guha et al. Cite it as [Guha
 <li>Guha, Brickley, and Macbeth. 2016. <a href="http://dx.doi.org/10.1145/2844544">Schema.org: evolution of structured data on the web.</a> Communications of the ACM 59(2).</li>
 </ul>
 
-<script>
-function getWordCount(node) {
-  return node.textContent.trim().split(" ").length;
-}
-var paragraphs = document.querySelectorAll("p")
-for ( var i = 0; i < paragraphs.length; i++ ) {
-  p = paragraphs[i];
-  if (!p.id) continue;
-  var counter = document.getElementById(p.id + "count");
-  if (!counter) continue;
-  counter.textContent = getWordCount(p);
-}
-</script>
+<script src="https://rawgit.com/ucds-vu/km2018-portfolio-template/master/scripts.js"></script>
 
 </body>
 </html>
