@@ -1,11 +1,9 @@
 function getWordCount(node) {
   return node.textContent.trim().split(" ").length;
 }
-var paragraphs = document.querySelectorAll("p")
+var paragraphs = document.querySelectorAll(".counter")
 for ( var i = 0; i < paragraphs.length; i++ ) {
   p = paragraphs[i];
-  if (!p.id) continue;
-  var counter = document.getElementById(p.id + "count");
-  if (!counter) continue;
-  counter.textContent = getWordCount(p);
+  c = p.textContent.trim().split(" ").length;
+  p.innerHTML = p.innerHTML + " <span style='color: gray'><em>(" + c + " words</em>)</span>";
 }
