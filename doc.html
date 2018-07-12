@@ -13,17 +13,27 @@
 
 <h3>Topic: Knowledge and Media</h3>
 
-<p>Replace this text with your summary of Lecture 1 about the topic of "Knowledge and Media".</p>
+<p id="p1">
+Replace this text with your summary of Lecture 1 about the topic of "Knowledge and Media".
+</p>
 
+<p><em>Word count:</em> <span id="p1count">...</span></p>
 
 <h3>Literature: Voida et al. 2011</h3>
 
-<p>Replace this text with your summary of the paper by Voida et al. Cite it as [Voida et al. 2011].</p>
+<p id="p2">
+Replace this text with your summary of the paper by Voida et al. Cite it as [Voida et al. 2011].
+</p>
 
+<p><em>Word count:</em> <span id="p2count"></span></p>
 
 <h3>Literature: Guha et al. 2016</h3>
 
-<p>Replace this text with your summary of the paper by Guha et al. Cite it as [Guha et al. 2016].</p>
+<p id="p3">
+Replace this text with your summary of the paper by Guha et al. Cite it as [Guha et al. 2016].
+</p>
+
+<p><em>Word count:</em> <span id="p3count"></span></p>
 
 
 <h3>References</h3>
@@ -32,6 +42,20 @@
 <li>Voida, Harmon, and Al-Ani. 2011. <a href="http://dx.doi.org/10.1145/1978942.1979078">Homebrew databases: complexities of everyday information management in nonprofit organizations.</a> In CHI '11, ACM.</li>
 <li>Guha, Brickley, and Macbeth. 2016. <a href="http://dx.doi.org/10.1145/2844544">Schema.org: evolution of structured data on the web.</a> Communications of the ACM 59(2).</li>
 </ul>
+
+<script>
+function getWordCount(node) {
+    return node.textContent.trim().split(" ").length;
+}
+var paragraphs = document.querySelectorAll("p")
+for ( var i = 0; i < paragraphs.length; i++ ) {
+  p = paragraphs[i];
+  if (!p.id) continue;
+  var counter = document.getElementById(p.id + "count");
+  if (!counter) continue;
+  counter.textContent = getWordCount(p);
+}
+</script>
 
 </body>
 </html>
